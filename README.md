@@ -26,13 +26,13 @@
 
 ```bash
 # 从 Gitee 安装（换成本人的 Gitee 用户名）
-npx skills add https://gitee.com/<你的用户名>/narwhal --skill narwhal
+npx skills add https://gitee.com/lixh017/narwhal --skill narwhal
 
 # 从 GitHub 安装
-npx skills add https://github.com/<你的用户名>/narwhal --skill narwhal
+npx skills add https://github.com/lixh017/narwhal --skill narwhal
 
 # Claude Code（任意平台，git clone 即可）
-git clone --depth 1 https://gitee.com/<你的用户名>/narwhal.git /tmp/narwhal
+git clone --depth 1 https://gitee.com/lixh017/narwhal.git /tmp/narwhal
 mkdir -p ~/.claude/skills && cp -r /tmp/narwhal/skills/narwhal ~/.claude/skills/narwhal
 
 # 不走 git？直接安装单文件包（.skill 即 zip 归档，可托管在任何可下载 URL）
