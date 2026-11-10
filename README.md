@@ -22,17 +22,27 @@
 
 ## 安装
 
+支持 **GitHub / GitLab / Gitee / 自建 Git** 任意平台（skills CLI 对任意 git 主机通用）：
+
 ```bash
-# 通用（skills 生态）
+# 从 Gitee 安装（换成本人的 Gitee 用户名）
+npx skills add https://gitee.com/<你的用户名>/narwhal --skill narwhal
+
+# 从 GitHub 安装
 npx skills add https://github.com/<你的用户名>/narwhal --skill narwhal
 
-# Claude Code
-git clone --depth 1 https://github.com/<你的用户名>/narwhal.git /tmp/narwhal
+# Claude Code（任意平台，git clone 即可）
+git clone --depth 1 https://gitee.com/<你的用户名>/narwhal.git /tmp/narwhal
 mkdir -p ~/.claude/skills && cp -r /tmp/narwhal/skills/narwhal ~/.claude/skills/narwhal
+
+# 不走 git？直接安装单文件包（.skill 即 zip 归档，可托管在任何可下载 URL）
+npx skills add https://<任意下载地址>/narwhal.skill
 
 # Codebuddy / 其他读取 skills 目录的 agent
 # 把 skills/narwhal/ 整个目录复制进对应 skills 目录即可
 ```
+
+> 说明：skills CLI 仅对 `owner/repo` 简写默认解析为 GitHub；使用 Gitee 等其他平台时请传**完整 URL**。私有仓库同样支持（使用本机已配置的 Git 凭据）。
 
 ## 快速开始
 
